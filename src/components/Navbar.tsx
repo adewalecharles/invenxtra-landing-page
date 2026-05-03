@@ -1,27 +1,25 @@
 import { motion } from 'motion/react';
-import { ShoppingBag, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import logo from '../images/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Features', href: '#' },
-    { name: 'Solutions', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'Resources', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: 'Features', href: '#features' },
+    { name: 'Solutions', href: '#solutions' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Resources', href: '#resources' },
+    { name: 'Company', href: '#company' },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-bottom border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-2">
-            <div className="bg-brand w-10 h-10 rounded-lg flex items-center justify-center">
-              <ShoppingBag className="text-white w-6 h-6" />
-            </div>
-            <span className="text-2xl font-extrabold text-gray-900 tracking-tight">invenxtra</span>
+          <div className="flex items-center">
+            <img src={logo} alt="Inventxtra logo" className="h-50 w-50 rounded-xl object-contain" />
           </div>
 
           <div className="hidden md:flex items-center gap-8">

@@ -1,5 +1,5 @@
 import { ShoppingBag, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-
+import logo from '../images/footer_logo.png';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <div className="bg-brand w-8 h-8 rounded-lg flex items-center justify-center">
-                <ShoppingBag className="text-white w-5 h-5" />
+                <img src={logo} alt="Inventxtra logo" className="h-50 w-50 rounded-xl object-contain" />
               </div>
               <span className="text-xl font-bold text-white tracking-tight">invenxtra</span>
             </div>
