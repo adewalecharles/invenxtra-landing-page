@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative lg:ml-1"
+             className="relative lg:ml-16 hidden md:block"
           >
             <img src={heroImg} alt="Inventxtra dashboard hero" className="w-full h-100 object-cover rounded-2xl" />
           </motion.div>

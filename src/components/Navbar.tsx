@@ -8,10 +8,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Features', href: '#features' },
-    { name: 'Solutions', href: '#solutions' },
+    { name: 'Showcase', href: '#showcase' },
+    { name: 'How it Works', href: '#how-it-works' },
     { name: 'Pricing', href: '#pricing' },
-    { name: 'Resources', href: '#resources' },
-    { name: 'Company', href: '#company' },
+    { name: 'Testimonials', href: '#testimonials' },
   ];
 
   return (
