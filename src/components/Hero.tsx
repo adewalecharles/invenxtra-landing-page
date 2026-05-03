@@ -3,7 +3,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-brand-muted/30 to-white">
+    <section className="pt-32 pb-16 md:pt-44 md:pb-24 overflow-hidden bg-gradient-to-b from-brand-muted/30 to-white">
       <div className="section-container relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div

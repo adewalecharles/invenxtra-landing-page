@@ -2,7 +2,7 @@ import { ShoppingBag } from 'lucide-react';
 
 export default function CTA() {
   return (
-    <section className="section-container !py-12">
+    <section className="section-container py-12">
       <div className="bg-brand rounded-[2.5rem] p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
         {/* Background blobs for depth */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />

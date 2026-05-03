@@ -10,7 +10,7 @@ export default function Showcase() {
   ];
 
   return (
-    <section className="py-24 bg-surface">
+    <section className="py-16 bg-surface">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <p className="text-brand font-bold uppercase tracking-widest text-sm mb-4">Powerful, Simple, Intelligent</p>

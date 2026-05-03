@@ -23,7 +23,7 @@ export default function Values() {
   ];
 
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-12 bg-surface">
       <div className="section-container">
         <div className="grid md:grid-cols-3 gap-8">
           {values.map((item) => (

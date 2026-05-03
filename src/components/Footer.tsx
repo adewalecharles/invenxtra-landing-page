@@ -27,9 +27,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#020817] text-gray-400 py-20 px-4">
+    <footer className="bg-[#020817] text-gray-400 py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-6 gap-12 mb-20">
+        <div className="grid md:grid-cols-6 gap-12 mb-12">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <div className="bg-brand w-8 h-8 rounded-lg flex items-center justify-center">

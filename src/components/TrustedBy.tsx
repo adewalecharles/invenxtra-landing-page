@@ -11,8 +11,8 @@ export default function TrustedBy() {
   ];
 
   return (
-    <section className="py-12 bg-white border-y border-gray-100">
-      <div className="section-container !py-0">
+    <section className="py-8 bg-white border-y border-gray-100">
+      <div className="section-container">
         <p className="text-center text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-10">
           Trusted by 5,000+ businesses worldwide
         </p>
