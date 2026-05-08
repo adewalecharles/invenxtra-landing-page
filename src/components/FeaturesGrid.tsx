@@ -21,6 +21,7 @@ export default function FeaturesGrid() {
     { title: 'Reports & Analytics', desc: 'Powerful reports and visual analytics to grow smarter.', icon: BarChart3, color: 'text-indigo-600', bg: 'bg-indigo-50' },
     { title: 'AI Smart Recommendation', desc: 'AI powered suggestions to optimize stock and sales.', icon: BrainCircuit, color: 'text-blue-500', bg: 'bg-blue-50' },
     { title: 'Multi-Location', desc: 'Manage multiple locations and consolidate your business.', icon: MapPin, color: 'text-sky-600', bg: 'bg-sky-50' },
+    {title: 'Logistics & Delivery', desc: 'Integrated logistics and delivery management for seamless operations.', icon: ShoppingCart, color: 'text-cyan-600', bg: 'bg-cyan-50' },
     { title: 'And Much More', desc: 'Discover many more features built to scale your business.', icon: Plus, color: 'text-indigo-500', bg: 'bg-indigo-50' },
   ];
 

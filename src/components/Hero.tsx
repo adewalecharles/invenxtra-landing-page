@@ -3,6 +3,10 @@ import { CheckCircle2 } from 'lucide-react';
 import heroImg from '../images/hero_img.svg';
 
 export default function Hero() {
+    const TEST_API_URL = import.meta.env.VITE_TEST_API_URL;
+  const LIVE_API_URL = import.meta.env.VITE_LIVE_API_URL;
+  const APP_ENV = import.meta.env.VITE_APP_ENV;
+
   return (
     <section className="relative overflow-hidden pt-24 pb-16 md:pt-28 md:pb-24 bg-gradient-to-b from-brand-muted/40 to-white">
       <div className="absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_top_right,_rgba(0,102,255,0.16),_transparent_45%)]" />
@@ -29,15 +33,29 @@ export default function Hero() {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-600 max-w-2xl leading-8">
-                Inventory, POS, workforce, finance, and AI insights—everything you need to manage, sell and grow your business in one place.
+                Inventory, POS, workforce, finance, and AI insights; everything you need to manage, sell and grow your business in one place.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary py-4 px-10 text-base sm:text-lg rounded-full">
+              <button 
+              onClick={() =>
+                window.location.href =
+                  `${['development', 'staging'].includes(APP_ENV)
+                    ? TEST_API_URL
+                    : LIVE_API_URL}/onboarding`
+              }
+              className="btn-primary py-4 px-10 text-base sm:text-lg rounded-full">
                 Get Started Free
               </button>
-              <button className="btn-secondary py-4 px-10 text-base sm:text-lg rounded-full">
+              <button 
+              onClick={() =>
+                window.location.href =
+                  `${['development', 'staging'].includes(APP_ENV)
+                    ? TEST_API_URL
+                    : LIVE_API_URL}/onboarding`
+              }
+              className="btn-secondary py-4 px-10 text-base sm:text-lg rounded-full">
                 Book a Demo
               </button>
             </div>

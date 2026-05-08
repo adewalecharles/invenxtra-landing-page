@@ -1,6 +1,9 @@
 import { ShoppingBag } from 'lucide-react';
 
 export default function CTA() {
+   const TEST_API_URL = import.meta.env.VITE_TEST_API_URL;
+  const LIVE_API_URL = import.meta.env.VITE_LIVE_API_URL;
+  const APP_ENV = import.meta.env.VITE_APP_ENV;
   return (
     <section className="section-container py-12">
       <div className="bg-brand rounded-[2.5rem] p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
@@ -23,10 +26,26 @@ export default function CTA() {
         </div>
         
         <div className="relative z-10 flex flex-col sm:flex-row gap-4 shrink-0 w-full md:w-auto">
-          <button className="bg-white text-brand px-10 py-5 rounded-2xl font-bold text-lg hover:bg-brand-muted transition-all shadow-lg">
+          <button 
+            onClick={() =>
+              window.location.href =
+                `${['development', 'staging'].includes(APP_ENV)
+                  ? TEST_API_URL
+                  : LIVE_API_URL}/onboarding`
+            }
+            className="bg-white text-brand px-10 py-5 rounded-2xl font-bold text-lg hover:bg-brand-muted transition-all shadow-lg"
+          >
             Get Started Free
           </button>
-          <button className="bg-brand-dark/30 text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-brand-dark transition-all">
+          <button 
+            onClick={() =>
+              window.location.href =
+                `${['development', 'staging'].includes(APP_ENV)
+                  ? TEST_API_URL
+                  : LIVE_API_URL}/onboarding`
+            }
+            className="bg-brand-dark/30 text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-brand-dark transition-all"
+          >
             Book a Demo
           </button>
         </div>

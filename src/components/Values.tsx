@@ -4,7 +4,7 @@ export default function Values() {
   const values = [
     {
       title: 'Manage Everything',
-      desc: 'Inventory, suppliers, workforce, purchases, finances and more – all in one place.',
+      desc: 'Inventory, suppliers, workforce, purchases, finances and more, all in one place.',
       icon: LayoutGrid,
       color: 'bg-brand'
     },

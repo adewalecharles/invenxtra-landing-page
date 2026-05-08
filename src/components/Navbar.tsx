@@ -6,6 +6,10 @@ import logo from '../images/logo.png';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const TEST_API_URL = import.meta.env.VITE_TEST_API_URL;
+  const LIVE_API_URL = import.meta.env.VITE_LIVE_API_URL;
+  const APP_ENV = import.meta.env.VITE_APP_ENV;
+
   const navLinks = [
     { name: 'Features', href: '#features' },
     { name: 'Showcase', href: '#showcase' },
@@ -35,14 +39,30 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <button className="text-sm font-semibold text-gray-700 hover:text-brand px-4 py-2">
+            <button
+              onClick={() =>
+                window.location.href =
+                  `${['development', 'staging'].includes(APP_ENV)
+                    ? TEST_API_URL
+                    : LIVE_API_URL}/login`
+              }
+              className="text-sm font-semibold text-gray-700 hover:text-brand px-4 py-2"
+            >
               Login
             </button>
-            <button className="bg-brand text-white text-sm font-semibold px-6 py-3 rounded-lg hover:bg-brand-dark transition-all">
+
+            <button
+              onClick={() =>
+                window.location.href =
+                  `${['development', 'staging'].includes(APP_ENV)
+                    ? TEST_API_URL
+                    : LIVE_API_URL}/onboarding`
+              }
+              className="bg-brand text-white text-sm font-semibold px-6 py-3 rounded-lg hover:bg-brand-dark transition-all"
+            >
               Get Started Free
             </button>
           </div>
-
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
