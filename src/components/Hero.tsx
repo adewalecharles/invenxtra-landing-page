@@ -48,14 +48,24 @@ export default function Hero() {
               className="btn-primary py-4 px-10 text-base sm:text-lg rounded-full">
                 Get Started Free
               </button>
-              <button 
-              onClick={() =>
-                window.location.href =
-                  `${['development', 'staging'].includes(APP_ENV)
-                    ? TEST_API_URL
-                    : LIVE_API_URL}/onboarding`
-              }
-              className="btn-secondary py-4 px-10 text-base sm:text-lg rounded-full">
+              <button
+                onClick={() => {
+                  const subject = encodeURIComponent('Request to Book an Invenxtra Demo');
+
+                  const body = encodeURIComponent(
+                    `Hi Invenxtra Team,
+
+              I would like to schedule a demo of the Invenxtra platform to better understand its features and capabilities.
+
+              Please let me know the available dates and next steps.
+
+              Best regards,`
+                  );
+
+                  window.location.href = `mailto:shyprince1@gmail.com?subject=${subject}&body=${body}`;
+                }}
+                className="btn-secondary py-4 px-10 text-base sm:text-lg rounded-full"
+              >
                 Book a Demo
               </button>
             </div>

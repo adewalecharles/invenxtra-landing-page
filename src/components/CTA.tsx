@@ -38,12 +38,21 @@ export default function CTA() {
             Get Started Free
           </button>
           <button 
-            onClick={() =>
-              window.location.href =
-                `${['development', 'staging'].includes(APP_ENV)
-                  ? TEST_API_URL
-                  : LIVE_API_URL}/onboarding`
-            }
+            onClick={() => {
+                  const subject = encodeURIComponent('Request to Book an Invenxtra Demo');
+
+                  const body = encodeURIComponent(
+                    `Hi Invenxtra Team,
+
+              I would like to schedule a demo of the Invenxtra platform to better understand its features and capabilities.
+
+              Please let me know the available dates and next steps.
+
+              Best regards,`
+                  );
+
+                  window.location.href = `mailto:shyprince1@gmail.com?subject=${subject}&body=${body}`;
+                }}
             className="bg-brand-dark/30 text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-brand-dark transition-all"
           >
             Book a Demo
