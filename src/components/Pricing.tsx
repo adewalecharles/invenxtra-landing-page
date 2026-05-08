@@ -168,7 +168,7 @@ export default function Pricing() {
             <div className={`w-5 h-5 bg-brand rounded-full transition-transform ${billingCycle === 'yearly' ? 'translate-x-7' : 'translate-x-0'}`} />
           </button>
           <span className={`text-sm font-bold ${billingCycle === 'yearly' ? 'text-gray-900' : 'text-gray-400'}`}>
-            Yearly <span className="text-green-500 text-xs font-medium ml-1">Save 20%</span>
+            Yearly <span className="text-green-500 text-xs font-medium ml-1">Save 10%</span>
           </span>
         </div>
         
@@ -199,9 +199,14 @@ export default function Pricing() {
                     </span>
                     <span className="text-gray-500 font-medium capitalize">/{billingCycle.replace('ly', '')}</span>
                   </div>
-                  {billingCycle === 'yearly' && (
-                    <p className="text-xs text-gray-400 mt-1">Billed annually</p>
-                  )}
+                  <div className="flex flex-col gap-1 mt-1">
+                    {billingCycle === 'yearly' && (
+                      <p className="text-xs text-gray-400">Billed annually</p>
+                    )}
+                    {!plan.is_custom && (
+                      <p className="text-xs text-brand font-semibold">1 month free trial included</p>
+                    )}
+                  </div>
                 </div>
                 
                 <div className="space-y-4 mb-10 flex-grow">
@@ -216,11 +221,22 @@ export default function Pricing() {
                   ))}
                 </div>
                 
-                <button className={`w-full py-4 rounded-xl font-bold transition-all ${
-                  isGrowth 
-                  ? 'bg-brand text-white hover:bg-brand-dark' 
-                  : 'bg-white text-brand border border-brand hover:bg-brand-muted'
-                }`}>
+                <button 
+                  onClick={() => {
+                    if (plan.is_custom) {
+                      const subject = encodeURIComponent(`Inquiry about ${plan.name} Plan for ${selectedType} Business`);
+                      const body = encodeURIComponent(`Hi Invenxtra Team,\n\nI am interested in learning more about the ${plan.name} plan for my ${selectedType} business. Please provide more details on how we can get started.\n\nBest regards,`);
+                      window.location.href = `mailto:shyprince1@gmail.com?subject=${subject}&body=${body}`;
+                    } else {
+                      window.location.href = `${url}/onboarding?plan=${plan.slug}&type=${selectedType}`;
+                    }
+                  }}
+                  className={`w-full py-4 rounded-xl font-bold transition-all ${
+                    isGrowth 
+                    ? 'bg-brand text-white hover:bg-brand-dark' 
+                    : 'bg-white text-brand border border-brand hover:bg-brand-muted'
+                  }`}
+                >
                   {plan.is_custom ? 'Contact Sales' : 'Start Free Trial'}
                 </button>
               </div>
