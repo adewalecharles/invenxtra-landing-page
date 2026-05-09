@@ -4,8 +4,8 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote: "Invenxtra has completely transformed the way we manage our inventory, everything is now in one place!",
-      author: "Arjun Mehta",
-      role: "Retail store owner",
+      author: "Akintoye Michael",
+      role: "CEO, 234 Bistro",
       stars: 5,
       avatar: "https://i.pravatar.cc/150?u=arjun"
     },
@@ -18,8 +18,8 @@ export default function Testimonials() {
     },
     {
       quote: "Workforce management and attendance tracking have saved us so much time and manual work.",
-      author: "Rohan Verma",
-      role: "Operation manager",
+      author: "Tomilayo Omoyele",
+      role: "Operations Manager, Elegance Luxury",
       stars: 5,
       avatar: "https://i.pravatar.cc/150?u=rohan"
     }

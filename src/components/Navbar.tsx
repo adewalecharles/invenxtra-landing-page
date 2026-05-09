@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 
 export default function Navbar() {
@@ -11,11 +12,11 @@ export default function Navbar() {
   const APP_ENV = import.meta.env.VITE_APP_ENV;
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
-    { name: 'Showcase', href: '#showcase' },
-    { name: 'How it Works', href: '#how-it-works' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Features', href: '/#features' },
+    { name: 'Showcase', href: '/#showcase' },
+    { name: 'How it Works', href: '/#how-it-works' },
+    { name: 'Pricing', href: '/#pricing' },
+    { name: 'Testimonials', href: '/#testimonials' },
   ];
 
   return (
@@ -23,7 +24,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img src={logo} alt="Inventxtra logo" className="h-50 w-50 rounded-xl object-contain" />
+            <Link to="/">
+              <img src={logo} alt="Inventxtra logo" className="h-50 w-50 rounded-xl object-contain" />
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
