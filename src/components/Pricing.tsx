@@ -26,6 +26,7 @@ interface Plan {
   pricing: Pricing;
   features: Feature[];
   is_custom: boolean;
+  is_free?: boolean;
   desc?: string; // Optional description
 }
 
@@ -203,9 +204,6 @@ export default function Pricing() {
                     {billingCycle === 'yearly' && (
                       <p className="text-xs text-gray-400">Billed annually</p>
                     )}
-                    {!plan.is_custom && (
-                      <p className="text-xs text-brand font-semibold">1 month free trial included</p>
-                    )}
                   </div>
                 </div>
                 
@@ -237,7 +235,7 @@ export default function Pricing() {
                     : 'bg-white text-brand border border-brand hover:bg-brand-muted'
                   }`}
                 >
-                  {plan.is_custom ? 'Contact Sales' : 'Start Free Trial'}
+                  {plan.is_custom ? 'Contact Sales' : 'Get Started'}
                 </button>
               </div>
             );

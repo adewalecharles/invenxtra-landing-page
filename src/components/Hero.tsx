@@ -46,7 +46,7 @@ export default function Hero() {
                     : LIVE_API_URL}/onboarding`
               }
               className="btn-primary py-4 px-10 text-base sm:text-lg rounded-full">
-                Get Started Free
+                Get Started
               </button>
               <button
                 onClick={() => {

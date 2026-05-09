@@ -35,7 +35,7 @@ export default function CTA() {
             }
             className="bg-white text-brand px-10 py-5 rounded-2xl font-bold text-lg hover:bg-brand-muted transition-all shadow-lg"
           >
-            Get Started Free
+            Get Started
           </button>
           <button 
             onClick={() => {

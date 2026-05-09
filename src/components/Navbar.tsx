@@ -63,7 +63,7 @@ export default function Navbar() {
               }
               className="bg-brand text-white text-sm font-semibold px-6 py-3 rounded-lg hover:bg-brand-dark transition-all"
             >
-              Get Started Free
+              Get Started
             </button>
           </div>
           <div className="md:hidden">
@@ -94,7 +94,7 @@ export default function Navbar() {
           ))}
           <div className="pt-4 flex flex-col gap-3">
             <button className="w-full text-center py-2 font-semibold text-gray-700">Login</button>
-            <button className="w-full bg-brand text-white py-3 rounded-lg font-semibold">Get Started Free</button>
+            <button className="w-full bg-brand text-white py-3 rounded-lg font-semibold">Get Started</button>
           </div>
         </motion.div>
       )}
